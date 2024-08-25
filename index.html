@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>  
+
+<h3>حــــــــجـــــزگـــــ عــــــــنـدنــــــــا </h3> 
+  
+    <div class="container">
+        <form id="booking-form">
+            <label for="name" >الإسم :</label>
+            <input type="text" id="name" name="name" class="field" placeholder="ادخل الاسم ثلاثي" required>
+
+            <label for="phone">رقم الهاتف:</label>
+            <input type="tel" id="phone" name="phone" placeholder="أدخل رقم الهاتف" dir="rtl" required>
+
+            <label for="date">اليوم:</label>
+            <input type="date" id="date" name="date" placeholder="اختر الحجز المناسب" required>
+            
+            <label for="bus" >اختر الباص:</label>
+            <select id="bus" name="bus" required>
+<option value="" disabled selected hidden>
+  احتر موعد الباص المناسب 
+</option>
+                <option value="bus1">باص 1 - 9:00 AM</option>
+                <option value="bus2">باص 2 - 12:00 PM</option>
+                <option value="bus3">باص 3 - 3:00 PM</option>
+                <option value="bus4">باص 4 - 6:00 PM</option>
+            </select><br>
+              
+            
+            <button type="submit" class="submit" id="submit">حجز الآن</button>
+            
+           <div class="line"></div>           
+           <div id="seat-map">
+                <div class="seats">
+                    <!-- Seats will be dynamically generated here -->
+                </div>
+      <h4>
+    ⬜    👈 المقاعد المتاحه      
+      <br>
+      🟩👈 المقاعد المحتجزه</h4><br>
+ <div class="line2"></div>
+ <button id="remove-seat-button" style="display: none;">حذف مقعدك</button>
+ 
+            </div>
+        </form>
+        <div id="confirmation" > معلومات الحجز تظهر هنا</div>
+    </div>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="script.js">
+
+    </script>
+
+</body>
+</html>
